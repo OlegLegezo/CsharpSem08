@@ -43,7 +43,7 @@ Console.WriteLine();
 
 void Remover(int[,] arr)
 {
-    int[,] newarr = new int[arr.GetLength(0) - 1, arr.GetLength(1) - 1];
+   // int[,] newarr = new int[arr.GetLength(0) - 1, arr.GetLength(1) - 1];
     int min = arr[0, 0];
     int imin = 0;
     int jmin = 0;
