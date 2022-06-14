@@ -57,28 +57,9 @@ int[,] ArrayChange(int[,] array1) //метод замены первой и по
     return array2;
 }
 
-int[,] ArrayChange2(int[,] array1) //метод замены первой и последней строки массива
-{
-    //int[,] array2 = array1;//вот так нельзя делать, птмчт по сути = это не перенос массива,
-    // а ссылка одного на другой нужно через Array.Copy
-    int[,] arrayCopy = new int[array1.GetLength(0), array1.GetLength(1)];
-    Array.Copy(array1, arrayCopy, array1.Length);
-    for (int j = 0; j < array1.GetLength(1); j++)//1-столбцы
-    {
-        arrayCopy[array1.GetLength(0) - 1, j] = array1[0, j];
-        arrayCopy[0, j] = array1[array1.GetLength(0) - 1, j];
 
-    }
-
-    return arrayCopy;
-}
-
-// int[,] arrayResult3 = ArrayChange(arrayResult1);
-// Console.WriteLine();
-// Console.WriteLine("метод Антона с temp замены первой и последней строки:");
-// PrintArray(arrayResult3);
-
-int[,] arrayResult4 = ArrayChange2(arrayResult1);
+int[,] arrayResult3 = ArrayChange(arrayResult1);
 Console.WriteLine();
-Console.WriteLine("метод c Array.Copy замены первой и последней строки:");
-PrintArray(arrayResult4);
+Console.WriteLine("метод Антона с temp замены первой и последней строки:");
+PrintArray(arrayResult3);
+
